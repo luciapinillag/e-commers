@@ -1,0 +1,111 @@
+/* Estilos globales */
+body {
+    background-color: darksalmon;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Estilos del contenedor de la cuadrícula */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 15vw 1fr;
+    grid-template-areas: 
+        "header header" 
+        "menu main" 
+        "footer footer";
+    gap: 10px;
+    height: 100%;
+}
+
+/* Estilos del encabezado */
+header {
+    grid-area: header;
+    background-color: darksalmon;
+    text-align: center;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    grid-area: menu;
+    background-color: darksalmon;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos del área principal */
+main {
+    grid-area: main;
+    background-color: darksalmon;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Estilos de las tarjetas de productos */
+.card {
+    margin: 10px;
+    height: 350px;
+    width: 300px;
+    background-color: rgb(164, 231, 175);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 60%;
+}
+
+/* Estilos del contenedor de imágenes */
+.contenedorImg {
+    width: 90%;
+    height: 70%;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.contenedorImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+/* Estilos del pie de página */
+footer {
+    grid-area: footer;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+/* Estilos de los botones */
+.card button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(105, 6, 6);
+    color: #e0d2d2;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos de los textos */
+h5,
+p {
+    margin: 0;
+}
